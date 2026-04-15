@@ -1,0 +1,167 @@
+<html>
+
+<head>
+<title>First Web Form</title>
+
+<style>
+
+@import url('https://googleapis.com');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a; /* Deep dark blue-black */
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	padding: 5%;
+}
+
+hr {
+    width: 100px;
+    height: 4px;
+    background: #38bdf8;
+    border: none;
+    margin: 15px 0 40px 0;
+    border-radius: 10px;
+}
+
+form {
+    background: rgba(30, 41, 59, 0.7); /* Translucent dark */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    color: #94a3b8;
+}
+
+input {
+    width: 100%;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    padding: 14px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.2);
+    transform: translateY(-2px);
+}
+
+
+input:not(:placeholder-shown):valid {
+    border-color: #10b981; /* Neon Green */
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: #ef4444; /* Bold Red */
+    animation: shake 0.4s;
+}
+
+.form-button {
+    width: 100%; /* Full width for a bolder look */
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    box-shadow: 0 4px 14px 0 rgba(56, 189, 248, 0.39);
+}
+
+button[type="submit"]:hover {
+    background: #7dd3fc;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45);
+}
+
+button[type="reset"] {
+    background: transparent;
+    color: #94a3b8;
+    border: 2px solid #334155;
+    margin-top: 15px; 
+}
+
+button[type="reset"]:hover {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+	<h1>First Web Form</h1>
+
+
+	<form action="process.php" method="GET">
+	
+	<p>
+		<label>Enter your name...</label>
+		<input type="text" name="name" value="" size="30" placeholder="kyle" >	
+	</p>
+	
+	<p>
+	<label>Enter your email...</label>
+	<input type="text" name="email" value="" size="30" placeholder="kyle@vahvuus.com">
+	</p>
+	
+	<p>
+	<label>Enter your age...</label>
+	<input type="number" name="age" value="" size="30" placeholder="4">		
+	</p>
+	<p>
+	<label>Enter your passcode...</label>	
+		<input type="password" name="password" value="" size="30" placeholder="*******" >		
+		
+	</p>	
+		<button class="form-button" type="submit">Submit</button>
+		<button class="form-button" type="reset">Reset</button>
+
+</body>
